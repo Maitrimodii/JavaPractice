@@ -1,5 +1,5 @@
 package Constructor;
-// The `this()` and `super()` calls must be the first statement in a constructor.
+// The `this()` and `super()` must be the first statement in a constructor.
 
 class Temp {
     // Default constructor

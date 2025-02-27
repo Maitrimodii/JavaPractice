@@ -6,7 +6,8 @@ class SingletonClass{
         System.out.println("singleton is instantiated");
     }
 
-    public static SingletonClass getInstance(){
+    public static SingletonClass getInstance()
+    {
             if(instance == null)
             {
                 instance = new SingletonClass();
@@ -21,8 +22,10 @@ class SingletonClass{
     }
 }
 
-public class Singleton {
-    public static void main(String[] args) {
+public class Singleton
+{
+    public static void main(String[] args)
+    {
         SingletonClass.getInstance();
         SingletonClass.doSomething();
     }

@@ -1,4 +1,4 @@
-package Inner;
+package Inner_Class;
 
 // An anonymous class can implement only one interface at a time
 // Interfaces cannot have constructors

@@ -2,7 +2,7 @@ class Base {
      int id = 1000; //Line n1
 
     Base() {
-        System.out.println("after rreturning from object method");
+        System.out.println("after returning from object method");
         Base(); //Line n2
         System.out.println("base method from constructor");
     }
@@ -26,7 +26,7 @@ class Derived extends Base {
     }
 }
 
-public class Test2 {
+public class InheritanceExample {
     public static void main(String[] args) {
         final int id ; //Line n
         Base base = new Derived(); //Line n9

@@ -14,6 +14,7 @@ class Box<T extends Number>{
         this.value = value;
     }
 }
+
 public class GenericsClass {
     public static void main(String[] args) {
         Box<Integer> box = new Box<>();

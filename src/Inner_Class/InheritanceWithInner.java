@@ -1,4 +1,4 @@
-package Inner;
+package Inner_Class;
 
 class Parent{
     int a = 20;

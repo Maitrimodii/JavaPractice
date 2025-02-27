@@ -1,4 +1,4 @@
-package Inner;
+package Inner_Class;
 //non static inner class cannot declare static members except for constant (final)
 //can access both static and non static members
 //static inner class can declare static members and can access outer class static members also but
