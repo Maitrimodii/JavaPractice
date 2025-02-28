@@ -2,7 +2,7 @@ class Base {
      int id = 1000; //Line n1
 
     Base() {
-        System.out.println("after returning from object method");
+        System.out.println("after returning from object construtor");
         Base(); //Line n2
         System.out.println("base method from constructor");
     }

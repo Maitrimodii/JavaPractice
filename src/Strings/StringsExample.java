@@ -1,6 +1,6 @@
 package Strings;
 //ways to create
-//using stirng literal(static memory)
+//using string literal(static memory)
 //using new keyword(heap memory)
 //string buffer is thread safe but string builder is not
 //in String which evaluated at compile time will be stored in scp and those which are evaluated at runtime will be stored in heap
