@@ -2,7 +2,7 @@
 //for add, remove, get, set it takes O(1) time complexity
 //for contains it takes O(n) time complexity
 //for addAll it takes O(n) time complexity
-//timsort : - uses insertion sort for smaller array and merge sort for larger array
+//tim sort : - uses insertion sort for smaller array and merge sort for larger array
 
 package Collections;
 
@@ -44,6 +44,11 @@ public class ListExample {
         field.setAccessible(true);
         var elementData = (Object[]) field.get(list);
         System.out.println("capacity of list " + elementData.length);
+
+        var list4 = new ArrayList<Integer>();
+        list4.add(10);
+        var elementData2 = (Object[]) field.get(list4);
+        System.out.println("capacity of list " + elementData2.length);
 
         list.remove(2);
 
