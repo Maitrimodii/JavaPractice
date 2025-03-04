@@ -10,10 +10,10 @@ public class CopyOnWriteArrayListVsArrayList {
         runWithCopyOnWriteArrayList();
 
         System.out.println("\nRunning with Regular ArrayList (No Sync):");
-        runWithRegularArrayList();
+        runWithRegularArrayList();// This will cause issues concurrentModificationException
     }
 
-    // ✅ CopyOnWriteArrayList (Thread-safe)
+    // CopyOnWriteArrayList (Thread-safe)
     private static void runWithCopyOnWriteArrayList() {
         var list = new CopyOnWriteArrayList<Integer>();
 
@@ -24,23 +24,31 @@ public class CopyOnWriteArrayListVsArrayList {
         list.add(5);
 
         Thread writerThread = new Thread(() -> {
-            try {
-                for (var item : list) {
+            try
+            {
+                for (var item : list)
+                {
                     list.add(6);
                     Thread.sleep(500);
                 }
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e)
+            {
                 e.printStackTrace();
             }
         });
 
         Thread readerThread = new Thread(() -> {
-            try {
-                for (var item : list) {
+            try
+            {
+                for (var item : list)
+                {
                     System.out.println("Reader (CopyOnWriteArrayList): " + item);
                     Thread.sleep(500);
                 }
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e)
+            {
                 e.printStackTrace();
             }
         });
@@ -48,16 +56,19 @@ public class CopyOnWriteArrayListVsArrayList {
         writerThread.start();
         readerThread.start();
 
-        try {
+        try
+        {
             writerThread.join();
             readerThread.join();
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e)
+        {
             e.printStackTrace();
         }
     }
 
-    // ❌ Regular ArrayList (No Sync) - This will cause issues
-    private static void runWithRegularArrayList() {
+    private static void runWithRegularArrayList()
+    {
         List<Integer> list = new ArrayList<>();
 
         list.add(1);
@@ -67,23 +78,31 @@ public class CopyOnWriteArrayListVsArrayList {
         list.add(5);
 
         Thread writerThread = new Thread(() -> {
-            try {
-                for (var item : list) {
+            try
+            {
+                for (var item : list)
+                {
                     list.add(6); // Concurrent modification
                     Thread.sleep(500);
                 }
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e)
+            {
                 e.printStackTrace();
             }
         });
 
         Thread readerThread = new Thread(() -> {
-            try {
-                for (var item : list) {
+            try
+            {
+                for (var item : list)
+                {
                     System.out.println("Reader (Regular List): " + item);
                     Thread.sleep(500);
                 }
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e)
+            {
                 e.printStackTrace();
             }
         });
@@ -91,10 +110,13 @@ public class CopyOnWriteArrayListVsArrayList {
         writerThread.start();
         readerThread.start();
 
-        try {
+        try
+        {
             writerThread.join();
             readerThread.join();
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e)
+        {
             e.printStackTrace();
         }
     }

@@ -3,10 +3,10 @@
 //for contains it takes O(n) time complexity
 //for addAll it takes O(n) time complexity
 //tim sort : - uses insertion sort for smaller array and merge sort for larger array
+//not thread -safe
 
 package Collections;
 
-import java.lang.reflect.Field;
 import java.util.*;
 
 class StringLengthComparator implements Comparator<String> {

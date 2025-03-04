@@ -1,11 +1,14 @@
+//not thread -safe
 package Collections;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.function.Predicate;
 
-public class LinkedListExample {
-    public static void main(String[] args) {
+public class LinkedListExample
+{
+    public static void main(String[] args)
+    {
         // Creating object of class linked list
         var object = new LinkedList<String>();
 
