@@ -1,6 +1,6 @@
 package Generics;
 
-//provides type safety and resuability
+//provides type safety and reusability
 //constructor does not support wildcard
 //<?super T> can accept T or superclass of T
 //super can only be used with wildcard

@@ -6,7 +6,6 @@
 
 package Collections;
 
-import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CopyOnWriteArrayListExample
@@ -15,7 +14,7 @@ public class CopyOnWriteArrayListExample
     {
         var list = new CopyOnWriteArrayList<Integer>();
 
-        list.add(1);
+        list.add(1);//O(n)
 
         list.add(2);
 
@@ -24,6 +23,8 @@ public class CopyOnWriteArrayListExample
         list.add(4);
 
         list.add(5);
+
+        list.add(null);//null values are allowed
 
         for (var integer : list)
         {
