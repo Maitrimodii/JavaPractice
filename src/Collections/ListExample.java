@@ -103,7 +103,11 @@ public class ListExample {
         System.out.println(list);
 
         Integer[] nums = list.toArray(new Integer[5]);
+
         for(var x : list){
+            if(x == 3){
+                list.remove(x);
+            }
             System.out.println(x);
         }
     }

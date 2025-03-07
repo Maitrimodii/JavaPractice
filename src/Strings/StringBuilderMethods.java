@@ -1,3 +1,5 @@
+//intial capacity 16
+//new capacity =  (current capacity *2 ) + 2
 package Strings;
 
 public class StringBuilderMethods {

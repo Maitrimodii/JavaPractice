@@ -6,6 +6,7 @@ public class ImmutableMapExample
 {
     public static void main(String[] args) {
         // Create an immutable map
+        //can have maximum 10 key-value pairs
         Map<String, Integer> map = Map.of("a", 1, "b", 2, "c", 3);
 
         // Print the map

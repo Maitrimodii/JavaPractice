@@ -1,5 +1,6 @@
 package Collections;
 
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 public class PredicateExample
@@ -20,5 +21,10 @@ public class PredicateExample
         Predicate<String> combiningPredicates = isWordsStartsWithA.and(isWordEndsWithA);
 
         System.out.println(combiningPredicates.test("Akshit"));
+
+        BiPredicate<Integer, Integer> isEvenSum = (x,y) -> (x + y) % 2 == 0;
+
+        System.out.println(isEvenSum.test(2, 3));
+
     }
 }
