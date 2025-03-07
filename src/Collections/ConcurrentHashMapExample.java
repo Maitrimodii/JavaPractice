@@ -15,17 +15,17 @@ public class ConcurrentHashMapExample
 
         System.out.println(map.containsKey("b"));
 
-        System.out.println(map.containsValue(10));
+        System.out.println(map.containsValue(10));//O(n)
 
-        map.replace("b", 2, 20);
-
-        System.out.println(map);
-
-        map.compute("c", (k, v) -> v + 100);
+        map.replace("b", 2, 20);//O(1)
 
         System.out.println(map);
 
-        map.merge("b", 10, Integer::sum);
+        map.compute("c", (k, v) -> v + 100);//O(1)
+
+        System.out.println(map);
+
+        map.merge("b", 10, Integer::sum);//O(1)
 
         System.out.println(map);
 
