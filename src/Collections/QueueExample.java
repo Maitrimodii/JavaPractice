@@ -23,7 +23,7 @@ public class QueueExample
 
         queue.add(null);
 
-        System.out.println(queue.remove());
+        System.out.println(queue.remove(    ));
 
         System.out.println(queue.poll());
 
