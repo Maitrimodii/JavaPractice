@@ -10,13 +10,21 @@ public class LinkedHashMapExample
     public static void main(String[] args) {
         //if accessOrder is true, then elements which are recently used are kept on end of list
         //if accessOrder is false, then elements are kept in the order they are inserted
-        LinkedHashMap<String, Integer> studentMap =  new LinkedHashMap<>(2, 0.5f, true);
+        LinkedHashMap<String, Integer> studentMap =  new LinkedHashMap<>(2, 1f, true);
 
         studentMap.put("a", 4);
 
         studentMap.put("b", 2);
 
         studentMap.put("c", 3);
+
+        studentMap.put("d", 2);
+
+        studentMap.put("e", 3);
+
+        studentMap.put("f", 2);
+
+        studentMap.put("g", 3);
 
         System.out.println("Initial LinkedHashMap: " + studentMap);
         for(Map.Entry<String, Integer> entry : studentMap.entrySet())

@@ -23,7 +23,7 @@ public class QueueExample
 
         queue.add(null);
 
-        System.out.println(queue.remove(    ));
+        System.out.println(queue.remove());
 
         System.out.println(queue.poll());
 
@@ -36,7 +36,7 @@ public class QueueExample
 
         queue2.add(2);
 
-        //add(), remove() and element() throws exception if not operation not successful
+        //add(), remove() and element() throws exception if operation not successful
         //offer() will return false
         //poll() will return null
 
