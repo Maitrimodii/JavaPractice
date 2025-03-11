@@ -18,7 +18,7 @@ package Threading.Locks;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ReentrantLockExample3
+public class ReentrantLockFairnessExample
 {
     public static void main(String[] args) {
         Runnable runnable = new Runnable() {
