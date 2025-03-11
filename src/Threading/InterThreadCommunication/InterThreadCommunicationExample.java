@@ -1,5 +1,10 @@
 // If sleep method is called before wait method then this will lead to deadlock.
 // To prevent this we can add timeout to the wait method.
+// wait, notify and notifyAll methods are defined in Object class because thread can call this method on any object.
+// wait method releases the lock on the object and thread goes into waiting state.
+// notify method wakes up one thread that is waiting on the object.
+// notifyAll method wakes up all threads that are waiting on the object.
+//wait, notify and notifyAll should be called from synchronized block otherwise it will throw IllegalMonitorStateException.
 
 package Threading.InterThreadCommunication;
 
