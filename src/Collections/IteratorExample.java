@@ -21,7 +21,7 @@ public class IteratorExample
             System.out.println(iterator.next());
         }
 
-//         throws conncurrent modification
+//         throws concurrent modification
 //        for(Integer number : list){
 //            if(number % 2 == 0){
 //                list.remove(number);
