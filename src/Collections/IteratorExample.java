@@ -10,6 +10,8 @@ public class IteratorExample
     {
         List<Integer> list = List.of(1,2,3,4,5,6,7,8,9,10);
 
+
+
         list.forEach(System.out::println);
 
         Iterator<Integer> iterator = list.iterator();
